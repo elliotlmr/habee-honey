@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url(../fonts/Quicksand-Regular.otf);
+}
+
+@font-face {
+  font-family: "Quicksand-Bold";
+  src: url(../fonts/Quicksand-Bold.otf);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  color: #3d2a07;
+  background-color: #fef1bb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+
+  //Yellow colors
+  --color-y: #fcaf1e;
+  --color-yd: #d19119;
+  --color-yl: #fef1bb;
+  --color-y-op: rgba(252, 175, 30, 0.4);
+  --color-yl-op: rgba(254, 241, 187, 0.4);
+
+  //Brown colors
+  --color-b: #3d2a07;
+  --color-bd: #221804;
+  --color-bl: #7d560f;
+  --color-b-op: rgba(61, 42, 7, 0.4);
+}
