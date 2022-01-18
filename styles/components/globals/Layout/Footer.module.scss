@@ -1,0 +1,36 @@
+.footer {
+  width: 100vw;
+  min-height: 10vh;
+  background-color: var(--color-bd);
+  font-family: "Quicksand-Bold";
+  font-size: 1.2rem;
+  color: var(--color-y);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 5%;
+}
+
+.mainMenu {
+  list-style-type: "⎔";
+  & li {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: var(--color-yl);
+    }
+  }
+}
+
+.subMenu {
+  list-style-type: "⎔";
+  & li {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: var(--color-yl);
+    }
+  }
+}
+
+.copyright {
+  align-self: center;
+}

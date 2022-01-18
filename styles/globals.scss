@@ -42,4 +42,14 @@ a {
   --color-bd: #221804;
   --color-bl: #7d560f;
   --color-b-op: rgba(61, 42, 7, 0.4);
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fcaf1e;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #3d2a07;
+    border-radius: 5px;
+  }
 }

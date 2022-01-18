@@ -26,4 +26,7 @@
 .navlink {
   font-family: "Quicksand-Bold";
   font-size: 1.5rem;
+  &.active {
+    color: var(--color-b-op);
+  }
 }
