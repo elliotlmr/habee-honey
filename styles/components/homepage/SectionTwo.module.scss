@@ -3,34 +3,35 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .comb {
+  transition: all ease-in-out;
   position: absolute;
-  top: 0;
   top: -40vh;
   right: -30vw;
-  border-inline: 5px solid var(--color-b);
+  border-inline: 5px solid var(--color-bd);
   width: 34.64vw;
   height: 20vw;
   &::before {
+    z-index: 2;
     content: "";
     position: absolute;
     top: 0;
     left: -5px;
-    border-inline: 5px solid var(--color-b);
+    border-inline: 5px solid var(--color-bd);
     width: 100%;
     height: 100%;
     margin: 0;
     transform: rotate(60deg);
   }
   &::after {
+    z-index: 2;
     content: "";
     position: absolute;
     top: 0;
     left: -5px;
-    border-inline: 5px solid var(--color-b);
+    border-inline: 5px solid var(--color-bd);
     width: 100%;
     height: 100%;
     margin: 0;
@@ -47,12 +48,68 @@
     height: auto;
     color: var(--color-y);
   }
+
+  &.visible {
+    & svg {
+      opacity: 0;
+    }
+  }
 }
 
 .title {
   font-family: "Quicksand-Bold";
-  font-size: 5vw;
+  font-size: 6vw;
   & span {
     color: var(--color-y);
   }
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card {
+  transition: all 0.2s ease-in-out;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  min-height: 40vh;
+  border: 2px solid var(--color-bd);
+  border-radius: 5px;
+  background-color: var(--color-yl);
+  &:hover {
+    background-color: var(--color-bd);
+    & h1 {
+      font-size: 2vw;
+      color: var(--color-y);
+    }
+    & p {
+      display: block;
+    }
+  }
+}
+
+.cardTitle {
+  font-family: "Quicksand-Bold";
+  font-size: 3.5vw;
+  margin-inline: auto;
+  padding-inline: 10px;
+  text-align: center;
+  & span {
+    color: var(--color-y);
+  }
+}
+
+.cardText {
+  transition: all 0.2s ease-in-out;
+  display: none;
+  color: var(--color-yl);
+  padding-inline: 10px;
+  font-size: 1.2vw;
+  text-align: justify;
 }

@@ -1,16 +1,13 @@
 import s from "../../../styles/components/globals/Layout/Header.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import Hive from "../Layout/Hive";
 
 export default function Header() {
   const router = useRouter();
-  useEffect(() => {
-    console.log(router);
-  }, []);
 
   return (
-    <header className={s.container}>
+    <header className={s.container} id="header">
       <Link href="/" passHref>
         <img src="./assets/HH-logo2.svg" className={s.logo} />
       </Link>
@@ -24,6 +21,11 @@ export default function Header() {
             }
           >
             Journey
+            <Hive
+              hiveWidth="100%"
+              combWidth="1"
+              hidden={router.pathname === "/journey" ? false : true}
+            />
           </a>
         </Link>
         <Link href="/shop" passHref>
@@ -35,6 +37,11 @@ export default function Header() {
             }
           >
             Shop
+            <Hive
+              hiveWidth="100%"
+              combWidth="1"
+              hidden={router.pathname === "/shop" ? false : true}
+            />
           </a>
         </Link>
         <Link href="/contact" passHref>
@@ -46,6 +53,11 @@ export default function Header() {
             }
           >
             Contact
+            <Hive
+              hiveWidth="100%"
+              combWidth="1"
+              hidden={router.pathname === "/contact" ? false : true}
+            />
           </a>
         </Link>
       </nav>

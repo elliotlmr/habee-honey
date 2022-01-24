@@ -1,4 +1,7 @@
 .container {
+  transition: all 0.2s ease-in-out;
+  z-index: 5;
+  position: relative;
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -24,9 +27,12 @@
 }
 
 .navlink {
+  z-index: 10;
+  position: relative;
   font-family: "Quicksand-Bold";
   font-size: 1.5rem;
+  width: 20%;
   &.active {
-    color: var(--color-b-op);
+    color: transparent;
   }
 }
